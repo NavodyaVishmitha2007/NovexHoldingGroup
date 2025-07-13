@@ -1,5 +1,3 @@
-'use client'
-
 import SiteHeader from "@/components/site-header"
 import HeroSection from "@/components/hero-section"
 import SectionHeading from "@/components/section-heading"
@@ -7,8 +5,7 @@ import SubsidiaryCard from "@/components/subsidiary-card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { CheckCircle, Globe, Lightbulb } from "lucide-react"
-import SiteFooter from "@/components/site-footer"
-import Script from "next/script" // << ADDED
+import SiteFooter from "@/components/site-footer" // Import SiteFooter
 
 export default function Home() {
   const featuredSubsidiaries = [
@@ -71,7 +68,7 @@ export default function Home() {
           buttonLink="/about"
         />
 
-        {/* Welcome Section */}
+        {/* Welcome/Introduction Section */}
         <section className="w-full py-20 md:py-32 lg:py-40 bg-nxg-light text-nxg-dark">
           <div className="container px-6 md:px-12 text-center max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold mb-6">Welcome to Novex Holding Group</h2>
@@ -89,7 +86,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Featured Subsidiaries */}
+        {/* Featured Subsidiaries Section */}
         <section className="w-full py-20 md:py-32 lg:py-40 bg-nxg-dark text-nxg-light">
           <div className="container px-6 md:px-12">
             <SectionHeading
@@ -113,32 +110,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 🔥 Adsterra Ad */}
-        <section className="w-full py-10 bg-nxg-dark flex justify-center">
-          <div className="w-[160px] h-[300px]">
-            {/* Adsterra Config Script */}
-            <Script id="adsterra-config" strategy="afterInteractive">
-              {`
-                atOptions = {
-                  'key' : '743c6154364ee34a047a43571200fcda',
-                  'format' : 'iframe',
-                  'height' : 300,
-                  'width' : 160,
-                  'params' : {}
-                };
-              `}
-            </Script>
-
-            {/* Adsterra Invoke Script */}
-            <Script
-              id="adsterra-invoke"
-              src="https://www.highperformanceformat.com/743c6154364ee34a047a43571200fcda/invoke.js"
-              strategy="afterInteractive"
-            />
-          </div>
-        </section>
-
-        {/* Why Choose NHG */}
+        {/* Why Choose NHG Section */}
         <section className="w-full py-20 md:py-32 lg:py-40 bg-nxg-light text-nxg-dark">
           <div className="container px-6 md:px-12">
             <SectionHeading
@@ -175,7 +147,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Latest Insights */}
+        {/* Latest Insights Section */}
         <section className="w-full py-20 md:py-32 lg:py-40 bg-nxg-dark text-nxg-light">
           <div className="container px-6 md:px-12">
             <SectionHeading
@@ -212,7 +184,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact CTA */}
+        {/* Call to Action for Contact */}
         <section className="w-full py-20 md:py-32 lg:py-40 bg-nxg-light text-nxg-dark">
           <div className="container px-6 md:px-12 text-center max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold mb-6">Ready to Collaborate?</h2>
@@ -228,7 +200,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <SiteFooter />
+      <SiteFooter /> // SiteFooter is now declared
     </div>
   )
-}
+} 
